@@ -1,3 +1,5 @@
 print("Source Code Enbale !")
 print("lots my love")
-print("true")
+x = 4
+print(x)
+print("ok ok ok ok")
