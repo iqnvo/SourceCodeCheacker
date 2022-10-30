@@ -1,1 +1,2 @@
-app = True
+def app():
+  return True
