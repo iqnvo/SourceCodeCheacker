@@ -81,7 +81,7 @@ class checker:
         if back == False:
             print(center(faded))
             
-            timer = 0#5
+            timer = 5
 
             while timer >= 0:
                 print(center(str(timer)), end="\r")
