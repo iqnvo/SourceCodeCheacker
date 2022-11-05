@@ -38,8 +38,6 @@ class checker:
     
     def __init__(self): 
 
-        self.cheackRandom(7)
-        return True
         self.animation()
         
         self.setPath("checker")
@@ -242,20 +240,23 @@ class checker:
             t1 = None
 
             try:
-                command[3]
+                command[2]
                 t1 = True
             except IndexError:
                 t1 = False
             
             try:
                 if t1 == True:
-                    if self.checkFile(command[3]) == True:
-                        threading.Thread(target=self.cheackRandom, args=(int(command[1]), int(command[2]), str(command[3]))).start()
+                    if self.checkFile(command[2]) == True:
+                        #threading.Thread(target=self.cheackRandom, args=(int(command[1]), command[2])).start()
+                        self.cheackRandom(int(command1), str(command[2]))
                     else:
                         print(f"{Fore.LIGHTRED_EX}[normal] File Not Found{Fore.RESET}")
 
                 else:
-                    threading.Thread(target=self.cheackRandom, args=(int(command[1]), int(command[2]))).start()
+                    #print(command[1])
+                    #threading.Thread(target=self.cheackRandom, args=(int(command[1]))).start()
+                    self.cheackRandom(int(command[1]))
 
                 
             except:
